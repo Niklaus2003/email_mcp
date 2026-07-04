@@ -1,0 +1,17 @@
+[
+    {
+        "subject": "Re: Model evaluation results for Q2",
+        "to": "sarah.chen@datasyinclabs.com",
+        "body": "Hi Sarah,\n\nFinished the evaluation on the three models we discussed. Here's what I found:\n\n1. Model A: 94% accuracy on validation set — performs well on edge cases we identified\n2. Model B: 91% accuracy but faster inference time (120ms vs 450ms)\n3. Model C: 96% accuracy but requires significantly more training data — see attached analysis\n\nMy recommendation would be Model A for now — it balances performance and robustness. Happy to walk through the methodology if you have questions.\n\nBest regards, Aaron Francis"
+    },
+    {
+        "subject": "Re: Data pipeline optimization request",
+        "to": "marcus.patel@datasyinclabs.com",
+        "body": "Hi Marcus,\n\nI looked at the data pipeline bottleneck you flagged. The issue is in the feature extraction step — we're processing each record sequentially when we could batch them. I've drafted an optimization that should reduce processing time by roughly 40% — check the branch `data-pipeline-v2`.\n\nOne thing to note: it requires updating our validation logic. I can help with that if you'd like, or I can document the changes clearly so someone else can take it forward.\n\nLet me know if you want to discuss further.\n\nBest regards, Aaron Francis"
+    },
+    {
+        "subject": "Re: Weekly sync notes and next steps",
+        "to": "team@datasyinclabs.com",
+        "body": "Team,\n\nJust a quick update on my progress this week. I completed the POC for the sentiment analysis feature — early results look promising (F1 score of 0.87 on our test set). I'm still working through some edge cases with sarcasm detection.\n\nFor next week, I'll be focusing on documentation and setting up the testing framework. If anyone wants to review the approach before I go further, I'm available anytime.\n\nThanks for the feedback on the architecture — it really helped clarify the direction.\n\nBest regards, Aaron Francis"
+    }
+]

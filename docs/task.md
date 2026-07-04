@@ -1,0 +1,5 @@
+- [x] Update `gmail_client.py` to include `message_id` and `last_message_id` in formatted threads.
+- [x] Update `draft_machine.py` to use Groq API instead of Gemini, including key passing.
+- [x] Install `streamlit` in the virtual environment.
+- [x] Create the premium Streamlit application `approval_gate.py`.
+- [x] Verify local execution and test approve/edit/discard/send workflows.

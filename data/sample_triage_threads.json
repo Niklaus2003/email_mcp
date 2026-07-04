@@ -1,0 +1,67 @@
+[
+  {
+    "thread_id": "demo_urgent_server",
+    "subject": "CRITICAL: Production DB Server Down",
+    "from": "Ops Team <ops@company.com>",
+    "snippet": "Our database connection pool is exhausted and the main application is returning 500 errors. We need your approval to restart.",
+    "messages": [
+      {
+        "from": "Ops Team <ops@company.com>",
+        "date": "2026-06-22 23:15",
+        "body": "Hi Aaron,\n\nWe are seeing a massive spike in database connections. The main application is completely down and returning 500 errors to all users.\n\nWe need your immediate approval to scale up the DB instance or restart it. Please advise ASAP!"
+      }
+    ]
+  },
+  {
+    "thread_id": "demo_needs_reply_meeting",
+    "subject": "Schedule Request: Q3 Roadmap Review Meeting",
+    "from": "Sarah Jenkins <aaronchammany@gmail.com>",
+    "snippet": "I want to schedule a 30-minute sync to review the Q3 roadmap. Please let me know your availability for tomorrow afternoon.",
+    "messages": [
+      {
+        "from": "Sarah Jenkins <aaronchammany@gmail.com>",
+        "date": "2026-06-22 18:30",
+        "body": "Hi Aaron,\n\nI hope you're having a good week. Can we schedule a quick 30-minute meeting tomorrow afternoon to align on the Q3 roadmap deliverables?\n\nI am free between 2 PM and 4 PM. Please let me know if any of those times work for you.\n\nBest,\nSarah"
+      }
+    ]
+  },
+  {
+    "thread_id": "demo_needs_reply_billing",
+    "subject": "Overdue Invoice #INV-2026-089 for Cloud Infrastructure",
+    "from": "CloudHost Billing <billing@cloudhost.com>",
+    "snippet": "Your invoice for CloudHost infrastructure is overdue. Please pay within 48 hours to avoid service interruption.",
+    "messages": [
+      {
+        "from": "CloudHost Billing <billing@cloudhost.com>",
+        "date": "2026-06-22 10:15",
+        "body": "Dear Aaron Francis,\n\nThis is a notification that invoice #INV-2026-089 is now 5 days overdue. The total amount outstanding is $1,250.00.\n\nPlease process this payment within 48 hours to ensure your cloud services are not interrupted.\n\nRegards,\nCloudHost Finance"
+      }
+    ]
+  },
+  {
+    "thread_id": "demo_fyi_newsletter",
+    "subject": "Weekly AI Newsletter: What's New in LLMs and Agents",
+    "from": "AI Weekly Digest <digest@aiweekly.io>",
+    "snippet": "This week, we cover the release of Llama 3.3, new agentic workflows, and updates in speech models.",
+    "messages": [
+      {
+        "from": "AI Weekly Digest <digest@aiweekly.io>",
+        "date": "2026-06-21 09:00",
+        "body": "Hello AI Enthusiasts!\n\nHere is your digest for this week:\n- **Llama 3.3:** The new versatile 70B model sets benchmarks in context length and reasoning.\n- **Voice Assistants:** Why Voice RAG is becoming the standard for customer service agent loops.\n\nNo action required. Happy reading!"
+      }
+    ]
+  },
+  {
+    "thread_id": "demo_ignore_promotional",
+    "subject": "Get 50% off on all premium workspace chairs today!",
+    "from": "OfficeDeals <deals@officedeals.com>",
+    "snippet": "Exclusive 24-hour flash sale for premium ergonomic office chairs. Upgrade your workspace now.",
+    "messages": [
+      {
+        "from": "OfficeDeals <deals@officedeals.com>",
+        "date": "2026-06-22 14:00",
+        "body": "Hi there,\n\nAre you looking to upgrade your office setup? For the next 24 hours only, get 50% off all ergonomic mesh chairs in our inventory!\n\nClick here to browse the sale."
+      }
+    ]
+  }
+]

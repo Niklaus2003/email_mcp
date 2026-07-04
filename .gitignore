@@ -1,0 +1,31 @@
+# Python environment and cache
+venv/
+.venv/
+env/
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environment secret keys (CRITICAL)
+.env
+
+# Streamlit local configurations
+.streamlit/
+
+# Local database / outputs / credentials / logs
+approved_drafts.json
+data/approved_drafts.json
+data/credentials.json
+data/token.json
+data/action_log.json
+output/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+
+# Gmail MCP Server (contains keys and node_modules)
+Gmail-MCP-Server/
+
+

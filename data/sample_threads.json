@@ -1,0 +1,63 @@
+[
+  {
+    "id": "thread_01_urgent",
+    "subject": "CRITICAL: Database CPU Spike & Latency Alert",
+    "messages": [
+      {
+        "from": "OpsAlert System <alerts@company.com>",
+        "date": "2026-06-22T08:00:00Z",
+        "body": "Warning: Database CPU utilization has spiked to 98% for the main PostgreSQL cluster. Latency has increased from 40ms to 850ms. Immediate investigation required."
+      },
+      {
+        "from": "Tech Lead (James Wu) <james.wu@company.com>",
+        "date": "2026-06-22T08:15:00Z",
+        "body": "Aaron,\n\nI see the alerts too. It looks like a connection leak or a bad query is locking the tables. We need your expert take on this immediately to avoid full system degradation. Are you online to look into this?"
+      }
+    ]
+  },
+  {
+    "id": "thread_02_manager",
+    "subject": "Q3 Planning: Feedback on Team Roadmap & Budget",
+    "from": "VP of Engineering <vp.eng@company.com>",
+    "messages": [
+      {
+        "from": "VP of Engineering <vp.eng@company.com>",
+        "date": "2026-06-22T10:30:00Z",
+        "body": "Hi Aaron,\n\nWe are compiling Q3 proposals for the executive committee. I need your feedback on our current roadmap priorities and if the model training budget looks sufficient for the upcoming quarters.\n\nPlease share your notes by the end of the day tomorrow."
+      }
+    ]
+  },
+  {
+    "id": "thread_03_fyi_standup",
+    "subject": "Weekly Standup Notes - June 22, 2026",
+    "messages": [
+      {
+        "from": "Scrum Master (Sarah Chen) <sarah.c@company.com>",
+        "date": "2026-06-22T09:00:00Z",
+        "body": "Hi Team,\n\nHere are the standup notes and action items from this morning's meeting:\n\n1. Backend: Finished API integration for the billing module.\n2. Design: Mockups for draft-desk completed and uploaded to Figma.\n3. QA: Automated end-to-end tests are now passing.\n\nHave a great week!\nSarah"
+      }
+    ]
+  },
+  {
+    "id": "thread_04_vendor_reply",
+    "subject": "Status: Cloud Credits Vendor Contract Review",
+    "messages": [
+      {
+        "from": "Account Manager (Megan Kelly) <megan.k@cloudvendor.com>",
+        "date": "2026-06-22T11:00:00Z",
+        "body": "Hi Aaron,\n\nJust following up on the cloud credits contract we sent over last Tuesday. We are approaching the end of the promotional cycle. Can we get the signed agreement back this week to lock in the 20% discount on GPU hours?"
+      }
+    ]
+  },
+  {
+    "id": "thread_05_meeting_design",
+    "subject": "Meeting Request: UI/UX Draft Desk Review",
+    "messages": [
+      {
+        "from": "Product Designer (Lily Torres) <lily.t@company.com>",
+        "date": "2026-06-22T14:00:00Z",
+        "body": "Hey Aaron,\n\nI've iterated on the glassmorphic aesthetics for the new unified app. I'd love to walk you through the prototypes. Do you have 15 minutes to spare tomorrow afternoon for a design review?"
+      }
+    ]
+  }
+]
