@@ -29,13 +29,16 @@ def _build_calendar_service():
     try:
         import streamlit as st
         if "CALENDAR_CREDENTIALS" in st.secrets:
-            creds_info = json.loads(st.secrets["CALENDAR_CREDENTIALS"])
-            creds = Credentials.from_authorized_user_info(creds_info, SCOPES)
-            if creds:
-                if creds.expired and creds.refresh_token:
-                    creds.refresh(Request())
-                return build("calendar", "v3", credentials=creds, cache_discovery=False)
-    except Exception:
+            try:
+                creds_info = json.loads(st.secrets["CALENDAR_CREDENTIALS"])
+                creds = Credentials.from_authorized_user_info(creds_info, SCOPES)
+                if creds:
+                    if creds.expired and creds.refresh_token:
+                        creds.refresh(Request())
+                    return build("calendar", "v3", credentials=creds, cache_discovery=False)
+            except Exception as e:
+                raise ValueError(f"Failed to initialize Google Calendar service using Streamlit secrets ['CALENDAR_CREDENTIALS']: {e}")
+    except ImportError:
         pass
 
     if os.path.exists("data/token.json"):

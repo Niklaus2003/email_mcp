@@ -36,12 +36,13 @@ st.set_page_config(
 # ----------------- INITIALIZE GMAIL CLIENT SAFELY -----------------
 gmail_available = False
 gmail_client = None
+gmail_error = None
 try:
     from gmail_client import GmailClient
     gmail_client = GmailClient()
     gmail_available = True
 except Exception as e:
-    pass
+    gmail_error = e
 
 @st.cache_resource
 def _get_send_reply():
@@ -1233,6 +1234,16 @@ def render_sidebar():
         st.title("The Desk")
         st.caption("Ghostwriter's Command Console")
         st.divider()
+        if not gmail_available and gmail_error:
+            st.error(f"⚠️ **Gmail Connection Failed**\n\n`{gmail_error}`")
+            st.markdown("""
+            **Troubleshooting Steps:**
+            1. Go to your Streamlit Cloud dashboard: **Settings** -> **Secrets**.
+            2. Verify you have defined the `GMAIL_CREDENTIALS` key.
+            3. Ensure it is a valid JSON string (matching your local `~/.gmail-mcp/credentials.json` token content).
+            4. If running locally, check that `gcp-oauth.keys.json` is located in your `Gmail-MCP-Server/` folder or home directory `~/.gmail-mcp/`.
+            """)
+            st.divider()
         if st.button("Run Full Pipeline", type="primary", use_container_width=True):
             st.session_state.pipeline_running = True
             st.rerun()

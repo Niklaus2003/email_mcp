@@ -56,14 +56,17 @@ class GmailClient:
         try:
             import streamlit as st
             if "GMAIL_CREDENTIALS" in st.secrets:
-                creds_info = json.loads(st.secrets["GMAIL_CREDENTIALS"])
-                self.credentials = Credentials.from_authorized_user_info(creds_info, SCOPES)
-                if self.credentials:
-                    if self.credentials.expired and self.credentials.refresh_token:
-                        self.credentials.refresh(Request())
-                    self.service = build('gmail', 'v1', credentials=self.credentials)
-                    return
-        except Exception:
+                try:
+                    creds_info = json.loads(st.secrets["GMAIL_CREDENTIALS"])
+                    self.credentials = Credentials.from_authorized_user_info(creds_info, SCOPES)
+                    if self.credentials:
+                        if self.credentials.expired and self.credentials.refresh_token:
+                            self.credentials.refresh(Request())
+                        self.service = build('gmail', 'v1', credentials=self.credentials)
+                        return
+                except Exception as e:
+                    raise ValueError(f"Failed to initialize Gmail client using Streamlit secrets ['GMAIL_CREDENTIALS']: {e}")
+        except ImportError:
             pass
 
         # Check for existing credentials first
